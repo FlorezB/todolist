@@ -24,7 +24,17 @@
 /* first form */
 
 .place {
-    
+    display: block;
+    padding: 1em;
+    width: 100%;
+    background-color: #A8D2A5;
+    margin-bottom: 2em;
+}
+
+.add {
+    border-radius: 30%;
+    padding: 1em 5em;
+    background: linear-gradient(#A8D2A5#ACD4E1);
 }
 /* gestion du background */
 
