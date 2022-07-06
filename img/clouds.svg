@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="840"
+   height="229"
+   viewBox="0 0 840 229"
+   fill="none"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="clouds.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs35">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath249">
+      <rect
+         style="fill:#000000"
+         id="rect251"
+         width="838.89874"
+         height="228.24454"
+         x="0.6673817"
+         y="0.6673817" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath253">
+      <rect
+         style="fill:#000000"
+         id="rect255"
+         width="838.89874"
+         height="228.24454"
+         x="0.6673817"
+         y="0.6673817" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath257">
+      <rect
+         style="fill:#000000"
+         id="rect259"
+         width="838.89874"
+         height="228.24454"
+         x="0.6673817"
+         y="0.6673817" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath261">
+      <rect
+         style="fill:#000000"
+         id="rect263"
+         width="838.89874"
+         height="228.24454"
+         x="0.6673817"
+         y="0.6673817" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview33"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="48.083261"
+     inkscape:cy="195.86858"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31" />
+  <ellipse
+     cx="273.602"
+     cy="31"
+     rx="243.536"
+     ry="126"
+     fill="#C8E3EC"
+     id="ellipse23"
+     clip-path="url(#clipPath261)" />
+  <ellipse
+     cx="569.923"
+     cy="83"
+     rx="237.938"
+     ry="146"
+     fill="#C8E3EC"
+     id="ellipse25"
+     clip-path="url(#clipPath257)" />
+  <ellipse
+     cx="262.864"
+     cy="-21"
+     rx="262.864"
+     ry="126"
+     fill="#ACD4E1"
+     id="ellipse27"
+     clip-path="url(#clipPath253)" />
+  <ellipse
+     cx="583.179"
+     cy="31"
+     rx="256.821"
+     ry="146"
+     fill="#ACD4E1"
+     id="ellipse29"
+     clip-path="url(#clipPath249)" />
+</svg>

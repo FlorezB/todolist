@@ -26,3 +26,19 @@
 .place {
     
 }
+/* gestion du background */
+
+.image-background {
+    background-image: url("../img/clouds.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* gestion des marges */
+
+/* .margin-left_20p100 {
+    margin-left: 20%;
+}
+.margin-right_20p100 {
+    margin-right: 20%;
+} */
