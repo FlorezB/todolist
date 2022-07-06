@@ -8,19 +8,19 @@
         <link rel="stylesheet" href="./css/style.css">
         <title>to do list</title>
     </head>
-    <body class = "font-monda">
-        <main>
+    <body class ="font-monda">
+        <main class ="image-background">
             <header>
                 <h1 class="bold font-size_48 flex justifyContent-center">My Tasks</h1>
             </header>
             <section>
                 <!-- form -->
-                <form action="">
+                <form action="" onsubmit="onTaskSubmit(); return false;">
                     <input type="text" placeholder="Title"> 
                     <input type="text" placeholder="Description">
                     <label for="priority">Priority</label>
                     <input id="priority" type="checkbox">
-                    <input type="range" name="doneness" id="doneness" min="1" max="5">
+                    <input type="range" id="priorityRange" min="1" max="5">
                     <input type="submit" value="Add">
                     
                 </form>
