@@ -30,7 +30,7 @@
     align-items: flex-end;
 }
 .gap5{
-    gap:5px;
+    gap: 5px;
 }
 
 h1 {
@@ -56,7 +56,7 @@ h1 {
     background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
     border: none;
     box-shadow: 0px 4px 4px #ACD4E1;
-    float: right;
+    /* float: right; */
     cursor: pointer;
 }
 
@@ -73,8 +73,14 @@ h1 {
     background-image: url("../img/clouds.svg");
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: 75%;
 }
-
+.background-none {
+    background: none;
+}
+.overflow-scroll {
+    overflow : scroll;
+}
 /* gestion des marges */
 .width_100p100 {
     width: 100%;
@@ -82,6 +88,22 @@ h1 {
 .padding-left_30 {
     padding-left: 30px;
 }
+.padding-left_150 {
+    padding-left: 150px;
+}
+.padding-right_150 {
+    padding-right: 150px;
+}
+.padding-right_30 {
+    padding-right: 30px;
+}
+.margin-top_20 {
+    margin-top: 20px;
+}
+.padding-top_20 {
+    padding-top: 20px;
+}
+
 /* gestion des border*/
 
 .border {
@@ -112,4 +134,13 @@ footer div {
 footer img {
     width: 32px;
     height: 32px;
+}
+
+.border-none {
+    border: none;
+}
+
+/* gestion des tailles des sections */
+.height300 {
+    height: 300px;
 }
