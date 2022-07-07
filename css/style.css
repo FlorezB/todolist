@@ -1,6 +1,7 @@
 /* gestion des polices  */
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');
 
+
 .font-monda {
     font-family: 'Monda', sans-serif;
 }
@@ -32,6 +33,12 @@
     gap:5px;
 }
 
+h1 {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+
 /* first form */
 
 .place {
@@ -40,12 +47,25 @@
     width: 100%;
     background-color: #A8D2A5;
     margin-bottom: 2em;
+    border: none;
 }
 
 .add {
-    border-radius: 30%;
-    padding: 1em 5em;
-    background: linear-gradient(#A8D2A5#ACD4E1);
+    border-radius: 25px;
+    padding: 1em 6em;
+    background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
+    border: none;
+    box-shadow: 0px 4px 4px #ACD4E1;
+    float: right;
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: grab;
 }
 /* gestion du background */
 
