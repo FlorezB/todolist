@@ -87,3 +87,29 @@ h1 {
 .border {
     border: 1px solid black
 }
+
+
+
+
+/* footer */
+
+footer {
+    background: #ACD4E1;
+}
+
+
+footer div {
+    /* width: 32px;
+    height: 32px; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+}
