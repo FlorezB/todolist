@@ -121,9 +121,6 @@ footer {
 
 
 footer div {
-    /* width: 32px;
-    height: 32px; */
-    cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -134,6 +131,7 @@ footer div {
 footer img {
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 
 .border-none {
