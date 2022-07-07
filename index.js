@@ -1,7 +1,7 @@
 // variables and constantes
 
 const checkedImg = document.getElementById("checkedImg")
-let checkedNumber = 0
+let checkedNumber
 
 const taskHistory = document.getElementById("task-history")
 const formTitle = document.getElementById("form-title")
@@ -9,7 +9,7 @@ const formDescription = document.getElementById("form-description")
 const priorityOfTask = document.getElementById("priority-range")
 //
 const initialize = () => {
-
+    checkedNumber = 0
 
 
 }

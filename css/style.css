@@ -19,7 +19,18 @@
 .justifyContent-center {
     justify-content: center;
 }
-
+.flex-column {
+    flex-direction: column;
+}
+.justifyContent-spaceBetween {
+    justify-content: space-between;
+}
+.alignItem-flexEnd {
+    align-items: flex-end;
+}
+.gap5{
+    gap:5px;
+}
 
 /* first form */
 
@@ -41,14 +52,18 @@
 .image-background {
     background-image: url("../img/clouds.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
 }
 
 /* gestion des marges */
-
-/* .margin-left_20p100 {
-    margin-left: 20%;
+.width_100p100 {
+    width: 100%;
 }
-.margin-right_20p100 {
-    margin-right: 20%;
-} */
+.padding-left_30 {
+    padding-left: 30px;
+}
+/* gestion des border*/
+
+.border {
+    border: 1px solid black
+}
