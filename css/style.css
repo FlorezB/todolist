@@ -142,3 +142,17 @@ footer img {
 .height300 {
     height: 300px;
 }
+
+
+
+/* RESPONSIVE TELEPHONE */
+@media  (max-width: 720px) {
+    main {
+        padding-top: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+
+        
+}
