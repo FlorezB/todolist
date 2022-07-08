@@ -9,7 +9,7 @@
         <title>to do list</title>
     </head>
     <body class ="font-monda">
-        <main class ="image-background padding-left_150 padding-right_150">
+        <main class ="image-background padding-left_10p100 padding-right_10p100">
             <header>
                 <h1 class="bold font-size_48 flex justifyContent-center">My Tasks</h1>
             </header>
@@ -21,8 +21,8 @@
                     <div class="flex justifyContent-spaceBetween">
                         <div>
                             <label for="priority">Priority</label>
-                            <input id="priority" type="checkbox" class="pointer">
-                            <input type="range" id="priority-range" min="1" max="5" class="cursor">
+                            <!-- <input id="priority" type="checkbox" class="pointer"> -->
+                            <input type="range" id="priority-range" min="0" max="5" class="cursor">
                         </div>  
                         <input type="submit" value="Add" class="add">
                     </div>
@@ -30,21 +30,21 @@
                     
                 </form>
             </section>
-            <section>
+            <section class="margin-top_20">
                 <!-- todoList -->
-                <div id="task-history" class="overflow-scroll height300">
-                    <!-- <div class="flex width_100p100 flex-column gap5 padding-top_20">
+                <div id="task-history" class="overflow-scroll height100vw max-height_500">
+                    <div class="flex width_100p100 flex-column gap5 padding-top_20">
                         <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
                             <button onclick="swapCheckColor()" class="border-none background-none"><img id="checkedImg1" src="./img/coche0.png" alt="image de coche dans un cercle" height="40px" width="40px"/></button>
-                            <h2 class="padding-left_30">Task #2 : Lorem ipsum dolor sit Incidunt cupiditate assumenda distinctio ullam quo vitae, porro ducimus rerum quibu!</h2>
+                            <h2 class="padding-left_30">tae, porro ducimus rerum quibu!</h2>
                             <div class="flex">
                                 <img src="./img/editer.png" alt="image de crayon" height="40px" width="40px">
                                 <img src="./img/corbeilleRouge.png" alt="image de corbeille" height="40px" width="40px">
                             </div>
                         </div>
                         <div class="border"></div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta atque facere unde necessi a a a a a a  a a a atatibus, tempore ullam debitis laboriosam in explicabo nobis veniam?</p>
-                    </div>-->
+                        <p>Lorem ipsum dolor sit,  a a a a a a  ore ullam debitis laboriosam in explicabo nobis veniam?</p>
+                    </div>
                 </div>
             </section>
             <footer>

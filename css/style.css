@@ -44,7 +44,7 @@ h1 {
 .place {
     display: block;
     padding: 1em;
-    width: 100%;
+    width: calc(100% - 2em);
     background-color: #A8D2A5;
     margin-bottom: 2em;
     border: none;
@@ -56,7 +56,6 @@ h1 {
     background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
     border: none;
     box-shadow: 0px 4px 4px #ACD4E1;
-    /* float: right; */
     cursor: pointer;
 }
 
@@ -88,11 +87,11 @@ h1 {
 .padding-left_30 {
     padding-left: 30px;
 }
-.padding-left_150 {
-    padding-left: 150px;
+.padding-left_10p100 {
+    padding-left: 10%;
 }
-.padding-right_150 {
-    padding-right: 150px;
+.padding-right_10p100 {
+    padding-right: 10%;
 }
 .padding-right_30 {
     padding-right: 30px;
@@ -110,7 +109,14 @@ h1 {
     border: 1px solid black
 }
 
+/* gestion des tailles des sections */
 
+.height100vw {
+    height: 100vw;
+}
+.max-height_500 {
+    max-height: 500px;
+}
 
 
 /* footer */
@@ -138,10 +144,7 @@ footer img {
     border: none;
 }
 
-/* gestion des tailles des sections */
-.height300 {
-    height: 300px;
-}
+
 
 
 
