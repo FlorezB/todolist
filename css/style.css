@@ -11,9 +11,27 @@
 .font-size_48 {
     font-size: 48px;
 }
-
-/* gestion des flexboxs */
-
+.font-size_30 {
+    font-size: 30px;
+}
+.text-align_center {
+    text-align: center;
+}
+/* a trier */
+.add {
+    /* border-radius: 25px; */
+    padding: 1em 6em;
+    /* background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%); */
+    /* border: none; */
+    /* box-shadow: 0px 4px 4px #ACD4E1; */
+}
+/* gestion des displays */
+.display-block {
+    display: block;
+}
+.display-none {
+    display: none;
+}
 .flex {
     display: flex;
 }
@@ -29,15 +47,100 @@
 .alignItem-flexEnd {
     align-items: flex-end;
 }
-.gap5{
+.alignItem-center {
+    align-items: center;
+}
+.gap5 {
     gap: 5px;
 }
+.gap30 {
+    gap: 30px;
+}
 
+/* gestion du background */
+
+.image-background {
+    background-image: url("../img/clouds.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 75%;
+}
+.background-none {
+    background: none;
+}
+.background-red {
+    background-color: #AF7A7A;
+}
+.background-linear_green-blue {
+    background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
+}
+/* gestion des marges */
+
+.padding-left_30 {
+    padding-left: 30px;
+}
+.padding-left_10p100 {
+    padding-left: 10%;
+}
+.padding-right_10p100 {
+    padding-right: 10%;
+}
+.padding-right_30 {
+    padding-right: 30px;
+}
+.margin-top_20 {
+    margin-top: 20px;
+}
+.padding-top_20 {
+    padding-top: 20px;
+}
+.padding-top {
+    padding: 2em 4em;
+}
+
+/* gestion des border*/
+
+.border {
+    border: 1px solid black
+}
+.border-radius25 {
+    border-radius: 25px;
+}
+.border-none {
+    border: none;
+}
+
+/* gestion des tailles des sections */
+
+.width_100p100 {
+    width: 100%;
+}
+.height_100vw {
+    height: 100vw;
+}
+.max-height_500 {
+    max-height: 500px;
+}
+.width_65p100 {
+    width: 65%;
+}
+.overflow-scroll {
+    overflow : scroll;
+}
+.height_400 {
+    height: 400px;
+}
+.height_100p100 {
+    height: 100%;
+}
+
+
+
+/* header */
 h1 {
     padding-top: 1em;
     padding-bottom: 2em;
 }
-
 
 /* first form */
 
@@ -66,57 +169,6 @@ h1 {
 .cursor {
     cursor: grab;
 }
-/* gestion du background */
-
-.image-background {
-    background-image: url("../img/clouds.svg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 75%;
-}
-.background-none {
-    background: none;
-}
-.overflow-scroll {
-    overflow : scroll;
-}
-/* gestion des marges */
-.width_100p100 {
-    width: 100%;
-}
-.padding-left_30 {
-    padding-left: 30px;
-}
-.padding-left_10p100 {
-    padding-left: 10%;
-}
-.padding-right_10p100 {
-    padding-right: 10%;
-}
-.padding-right_30 {
-    padding-right: 30px;
-}
-.margin-top_20 {
-    margin-top: 20px;
-}
-.padding-top_20 {
-    padding-top: 20px;
-}
-
-/* gestion des border*/
-
-.border {
-    border: 1px solid black
-}
-
-/* gestion des tailles des sections */
-
-.height100vw {
-    height: 100vw;
-}
-.max-height_500 {
-    max-height: 500px;
-}
 
 
 /* footer */
@@ -125,12 +177,10 @@ footer {
     background: #ACD4E1;
 }
 
-
 footer div {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1em;
 }
 
@@ -144,9 +194,20 @@ footer img {
     border: none;
 }
 
-
-
-
+/* positions */
+.position-absolute {
+    position: absolute;
+}
+.position-relative {
+    position: relative;
+}
+.position-top_42p100 {
+    top: 42%;
+    
+}
+.position-left_17v5p100 {
+    left: 17.5%
+}
 
 /* RESPONSIVE TELEPHONE */
 @media  (max-width: 720px) {

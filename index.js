@@ -20,6 +20,8 @@ const initialize = () => {
     taskNumber = 1
     tasks = []
     taskHistory.innerHTML = ``
+    document.toDoList.reset()
+    closeConfirmationWindow()
 }
 
 // fonction pour changer le status des taches
@@ -58,11 +60,12 @@ const writeTask = () => {
                 </div>
         </div>
         <div class="border">   <!-- ligne-->   </div>
-        <p>${task.description}</p>
+        <p>Task #${task.id} : ${task.description}${task.description}</p>
     </div>
     `
     })
     taskNumber ++
+    document.toDoList.reset()
 }
 
 // fonction qui supprime une tache
@@ -89,7 +92,7 @@ const deleteTask = (taskID) => {
                 </div>
             </div>
             <div class="border">   <!-- ligne-->   </div>
-            <p>${task.description}</p>
+            <p>Task #${task.id} : ${task.description}</p>
         </div>
         `
     })
@@ -100,3 +103,12 @@ const editTask = () => {
 
 }
 
+// fonction qui affiche la fenêtre de suppression 
+const openConfirmationWindow = () => {
+    document.getElementById("deleteAllConfirmation").setAttribute("class", "display-block position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute")
+}
+
+// fonction qui cache la fenetre de suppression
+const closeConfirmationWindow = () => {
+    document.getElementById("deleteAllConfirmation").setAttribute("class", "display-none position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute")
+}

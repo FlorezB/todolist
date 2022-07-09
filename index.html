@@ -15,14 +15,14 @@
             </header>
             <section>
                 <!-- form -->
-                <form action="" onsubmit="onTaskSubmit(); return false;">
-                    <input type="text" placeholder="Title" class="place" id="form-title"> 
+                <form name="toDoList" action="" onsubmit="onTaskSubmit(); return false;">
+                    <input type="text" placeholder="Title" class="place" id="form-title" required> 
                     <input type="text" placeholder="Description" class="place" id="form-description">
                     <div class="flex justifyContent-spaceBetween">
                         <div>
                             <label for="priority">Priority</label>
                             <!-- <input id="priority" type="checkbox" class="pointer"> -->
-                            <input type="range" id="priority-range" min="0" max="5" class="cursor">
+                            <input type="range" id="priority-range" value ="0" min="0" max="5" class="cursor">
                         </div>  
                         <input type="submit" value="Add" class="add">
                     </div>
@@ -32,8 +32,8 @@
             </section>
             <section class="margin-top_20">
                 <!-- todoList -->
-                <div id="task-history" class="overflow-scroll height100vw max-height_500">
-                    <div class="flex width_100p100 flex-column gap5 padding-top_20">
+                <div id="task-history" class="overflow-scroll height_100vw max-height_500">
+                    <!-- <div class="flex width_100p100 flex-column gap5 padding-top_20">
                         <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
                             <button onclick="swapCheckColor()" class="border-none background-none"><img id="checkedImg1" src="./img/coche0.png" alt="image de coche dans un cercle" height="40px" width="40px"/></button>
                             <h2 class="padding-left_30">tae, porro ducimus rerum quibu!</h2>
@@ -44,23 +44,34 @@
                         </div>
                         <div class="border"></div>
                         <p>Lorem ipsum dolor sit,  a a a a a a  ore ullam debitis laboriosam in explicabo nobis veniam?</p>
-                    </div>
+                    </div> -->
                 </div>
             </section>
-            <footer>
+            <section>
+                <!-- pop-up on button's clic -->
+                <section id="deleteAllConfirmation" class="display-none position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute">
+                    <div class="flex flex-column justifyContent-center alignItem-center height_100p100 gap30">
+                        <p class="font-size_30 text-align_center">Do you want to delete all the tasks ?</p>
+                        <div class=" flex gap30">
+                            <button class="padding-top background-linear_green-blue border-radius25 pointer border-none" onclick="initialize()">Yes</button>
+                            <button class="padding-top background-linear_green-blue border-radius25 pointer border-none" onclick="closeConfirmationWindow()">No</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <footer class="position-relative">
                 <div>
-                    <label for="tri">
-                        <img src="./img/trier.png" alt="Logo de tri">
-                    </label>
+                    <!-- <label for="tri"></label> -->
                     <!-- <input list="tri-list" id="tri" name="tri"> -->
-                    <select id="tri">
+                    <!-- <select id="tri">
                         <option value="A - Z">A - Z</option>
                         <option value="Z - A">Z - A</option>
                         <option value="Priority">Priority</option>
-                        </select>
-                    <img src="./img/filtre.png" alt="Logo de filtre">
-                    <img src="./img/aleatoire.png" alt="Logo aléatoire">
-                    <img src="./img/corbeilleNoir.png" alt="Logo corbeille noire">
+                    </select> -->
+                    <button class="border-none background-none"><img src="./img/trier.png" alt="Logo de tri" /></button>
+                    <button class="border-none background-none"><img src="./img/filtre.png" alt="Logo de filtre" /></button>
+                    <button class="border-none background-none"><img src="./img/aleatoire.png" alt="Logo aléatoire" /></button>
+                    <button onclick="openConfirmationWindow()" class="border-none background-none"><img src="./img/corbeilleNoir.png" alt="Logo corbeille noire" /></button>
                 </div>
             </footer>
         </main>
