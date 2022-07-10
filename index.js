@@ -127,15 +127,15 @@ const closeFilterByStatus = () => {
     document.getElementById("statusFilterChoice").setAttribute("class", "display-none position-absolute position-top_42p100 position-left_32p100 background-white height_400 width_fc border z-index_5")
 }
 
-// fonction qui affiche le filtre par priorité
-const openFilterByPriority = () => {
-    document.getElementById("priorityFilterChoice").setAttribute("class", "display-block position-absolute position-top_42p100 position-left_57p100 background-white height_400 width_fc border z-index_5")
-}
+// // fonction qui affiche le filtre par priorité
+// const openFilterByPriority = () => {
+//     document.getElementById("priorityFilterChoice").setAttribute("class", "display-block position-absolute position-top_42p100 position-left_57p100 background-white height_400 width_fc border z-index_5")
+// }
 
-// fonction qui cache le filtre par priorité
-const closeFilterByPriority = () => {
-    document.getElementById("priorityFilterChoice").setAttribute("class", "display-none position-absolute position-top_42p100 position-left_57p100 background-white height_400 width_fc border z-index_5")
-}
+// // fonction qui cache le filtre par priorité
+// const closeFilterByPriority = () => {
+//     document.getElementById("priorityFilterChoice").setAttribute("class", "display-none position-absolute position-top_42p100 position-left_57p100 background-white height_400 width_fc border z-index_5")
+// }
 
 // fonction qui filtre par status
 const filterByStatus = (statusNumber) => {
@@ -164,4 +164,11 @@ const filterByStatus = (statusNumber) => {
             `
         })
     }
+}
+
+// fonction qui filtre par priorité
+const filterByPriority = () => {
+    closeFilterByStatus()
+    tasks.sort((a, b) => Number(b.priority) - Number(a.priority))
+    writeTask()
 }
