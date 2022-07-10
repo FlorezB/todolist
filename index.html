@@ -69,7 +69,10 @@
                             <button onclick="filterByStatus(2)" class="border-none background-none"><img src="./img/coche2.png" alt="icone de validation" /></button>
                             <button onclick="filterByPriority()"><img src="" alt=""></button>
                         </div>
-                        <button onclick="filterByStatus(3)" class="border-none background-none"><img src="./img/FilterNone.png" alt="icone de filtrage barré" /></button>
+                        <div class="flex justifyContent-spaceBetween width_100p100">
+                            <button onclick="filterByStatus(3)" class="border-none background-none"><img src="./img/FilterNone.png" alt="icone de filtrage barré" /></button>
+                            <button onclick="closeFilterByStatus()" class="alignSelf-end border-none background-none"><img src="./img/croix.png" alt="icone de croix" /></button>
+                        </div>
                     </div>
                 </section>
                 <!-- <section id="priorityFilterChoice" class="display-none position-absolute position-top_42p100 position-left_57p100 height_400 width_fc border background-white z-index_-1">
@@ -87,9 +90,8 @@
             </section>
             <footer>
                 <div>
-                    <!-- <button onclick="openFilterByPriority()" class="border-none background-none"><img src="./img/trier.png" alt="Logo de tri" /></button> -->
                     <button onclick="openFilterByStatus()" class="border-none background-none"><img src="./img/filtre.png" alt="Logo de filtre" /></button>
-                    <button class="border-none background-none"><img src="./img/aleatoire.png" alt="Logo aléatoire" /></button>
+                    <button onclick="addRandomTask()" class="border-none background-none"><img src="./img/aleatoire.png" alt="Logo aléatoire" /></button>
                     <button onclick="openConfirmationWindow()" class="border-none background-none"><img src="./img/corbeilleNoir.png" alt="Logo corbeille noire" /></button>
                 </div>
             </footer>

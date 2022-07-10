@@ -58,6 +58,9 @@
 .gap30 {
     gap: 30px;
 }
+.alignSelf-end {
+    align-self: end;
+}
 
 /* gestion du background */
 
@@ -111,6 +114,9 @@
 }
 .padding-top {
     padding: 2em 4em;
+}
+.padding-none {
+    padding: none;
 }
 
 /* gestion des border*/

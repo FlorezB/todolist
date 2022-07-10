@@ -22,7 +22,6 @@ const initialize = () => {
     taskHistory.innerHTML = ``
     document.toDoList.reset()
     closeConfirmationWindow()
-    closeFilterByPriority()
     closeFilterByStatus()
 }
 
@@ -49,6 +48,27 @@ const onTaskSubmit = () => {
     taskNumber ++
 }
 
+// fonction qui ajoute une tache aléatoire
+const addRandomTask = () => {
+    const randomTaskList = [
+        {id: taskNumber, title: "Collecter du sable provenant de 5 pays", description: "", priority: 0, status: 0},
+        {id: taskNumber, title: "Voir les chutes du Niagara", description: "", priority: 0, status: 0},
+        {id: taskNumber, title: "Essayer la soupe de tortue", description: "", priority: 0, status: 0},
+        {id: taskNumber, title: "Grimper 5 montagnes", description: "", priority: 0, status: 0},
+        {id: taskNumber, title: "Réaliser une ToDo List", description: "", priority: 0, status: 0},
+        {id: taskNumber, title: "Apprendre l'astronomie", description: "", priority: 0, status: 0},
+        {id: taskNumber, title: "Push and Pull sur Git !", description: "", priority: 0, status: 0}
+    ]
+    const min = 0
+    const max = randomTaskList.length - 1
+    const gap = max - min + 1
+    const randomNumber = Math.floor(Math.random()*(gap)) + min
+    const randomTask = randomTaskList[randomNumber]
+    tasks.push(randomTask)
+    writeTask()
+    taskNumber ++
+}
+
 //fonction qui écrit les taches en html
 const writeTask = () => {
     taskHistory.innerHTML = ``
@@ -68,8 +88,6 @@ const writeTask = () => {
     </div>
     `
     })
-    
-    
 }
 
 // fonction qui supprime une tache
@@ -82,7 +100,6 @@ const deleteTask = (taskID) => {
         }
         taskNumber ++
     })
-
     taskHistory.innerHTML = ``
     tasks.forEach((task) => {
         taskHistory.innerHTML = taskHistory.innerHTML + `
@@ -106,36 +123,6 @@ const deleteTask = (taskID) => {
 const editTask = () => {
 
 }
-
-// fonction qui affiche la fenêtre de suppression 
-const openConfirmationWindow = () => {
-    document.getElementById("deleteAllConfirmation").setAttribute("class", "display-block position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute z-index_6")
-}
-
-// fonction qui cache la fenetre de suppression
-const closeConfirmationWindow = () => {
-    document.getElementById("deleteAllConfirmation").setAttribute("class", "display-none position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute z-index_6")
-}
-
-// fonction qui affiche le filtre par status
-const openFilterByStatus = () => {
-    document.getElementById("statusFilterChoice").setAttribute("class", "display-block position-absolute position-top_42p100 position-left_32p100 background-white height_400 width_fc border z-index_5")
-}
-
-// fonction qui cache le filtre par status
-const closeFilterByStatus = () => {
-    document.getElementById("statusFilterChoice").setAttribute("class", "display-none position-absolute position-top_42p100 position-left_32p100 background-white height_400 width_fc border z-index_5")
-}
-
-// // fonction qui affiche le filtre par priorité
-// const openFilterByPriority = () => {
-//     document.getElementById("priorityFilterChoice").setAttribute("class", "display-block position-absolute position-top_42p100 position-left_57p100 background-white height_400 width_fc border z-index_5")
-// }
-
-// // fonction qui cache le filtre par priorité
-// const closeFilterByPriority = () => {
-//     document.getElementById("priorityFilterChoice").setAttribute("class", "display-none position-absolute position-top_42p100 position-left_57p100 background-white height_400 width_fc border z-index_5")
-// }
 
 // fonction qui filtre par status
 const filterByStatus = (statusNumber) => {
@@ -171,4 +158,24 @@ const filterByPriority = () => {
     closeFilterByStatus()
     tasks.sort((a, b) => Number(b.priority) - Number(a.priority))
     writeTask()
+}
+
+// fonction qui affiche la fenêtre de suppression 
+const openConfirmationWindow = () => {
+    document.getElementById("deleteAllConfirmation").setAttribute("class", "display-block position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute z-index_6")
+}
+
+// fonction qui cache la fenetre de suppression
+const closeConfirmationWindow = () => {
+    document.getElementById("deleteAllConfirmation").setAttribute("class", "display-none position-left_17v5p100 position-top_42p100 height_400 width_65p100 background-red position-absolute z-index_6")
+}
+
+// fonction qui affiche le filtre par status
+const openFilterByStatus = () => {
+    document.getElementById("statusFilterChoice").setAttribute("class", "display-block position-absolute position-top_42p100 position-left_32p100 background-white height_400 width_fc border z-index_5")
+}
+
+// fonction qui cache le filtre par status
+const closeFilterByStatus = () => {
+    document.getElementById("statusFilterChoice").setAttribute("class", "display-none position-absolute position-top_42p100 position-left_32p100 background-white height_400 width_fc border z-index_5")
 }
