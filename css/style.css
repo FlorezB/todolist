@@ -212,6 +212,22 @@ h1 {
     box-shadow: 0px 4px 4px #ACD4E1;
     cursor: pointer;
 }
+.edit {
+    border-radius: 25px;
+    padding: 1em 6em;
+    background: linear-gradient(90deg, #AF7A7A 0%, #ACD4E1 115.2%);
+    border: none;
+    box-shadow: 0px 4px 4px #ACD4E1;
+    cursor: pointer;
+}
+.placeEdit {
+    background-color: #AF7A7A;
+    display: block;
+    padding: 1em;
+    width: calc(100% - 2em);
+    margin-bottom: 2em;
+    border: none;
+}
 
 .pointer {
     cursor: pointer;

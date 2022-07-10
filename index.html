@@ -15,27 +15,42 @@
             </header>
             <section>
                 <!-- form -->
-                <form name="toDoList" action="" onsubmit="onTaskSubmit(); return false;">
-                    <input type="text" placeholder="Title" class="place" id="form-title" required> 
-                    <input type="text" placeholder="Description" class="place" id="form-description">
-                    <div class="flex justifyContent-spaceBetween">
-                        <div>
-                            <label for="priority">Priority</label>
-                            <!-- <input id="priority" type="checkbox" class="pointer"> -->
-                            <input type="range" id="priority-range" value ="0" min="0" max="5" class="cursor">
-                        </div>  
-                        <input type="submit" value="Add" class="add">
-                    </div>
-                    
-                    
-                </form>
+                <div id="form-standard" class="display-block">
+                        <form name="toDoList" action="" onsubmit="onTaskSubmit(); return false">
+                            <input type="text" placeholder="Title" class="place" id="form-title" required> 
+                            <input type="text" placeholder="Description" class="place" id="form-description">
+                            <div class="flex justifyContent-spaceBetween">
+                                <div>
+                                    <label for="priority">Priority</label>
+                                    <input type="range" id="priority-range" value ="0" min="0" max="5" class="cursor">
+                                </div>  
+                                <input type="submit" value="Add" class="add">
+                            </div>
+                        </form>
+                </div>
+                <div id="form-edit" class="display-none">
+                    <form id="edit-to-do-list" name="editToDoList" action="" onsubmit="editTask(); return false">
+                        <input type="text" placeholder="Title" value="" class="placeEdit" id="edit-title" required> 
+                        <input type="text" placeholder="Description" value="" class="placeEdit" id="edit-description">
+                        <div class="flex justifyContent-spaceBetween">
+                            <div>
+                                <label for="priority">Priority</label>
+                                <input type="range" id="edit-priority-range" value ="" min="0" max="5" class="cursor">
+                            </div>  
+                            <input type="submit" value="Edit" class="edit">
+                        </div>
+                    </form>
+                </div>
             </section>
             <section class="margin-top_20">
                 <!-- todoList -->
                 <div id="task-history" class="overflow-scroll height_100vw max-height_500">
                     <!-- <div class="flex width_100p100 flex-column gap5 padding-top_20">
                         <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
-                            <button onclick="swapCheckColor()" class="border-none background-none"><img id="checkedImg1" src="./img/coche0.png" alt="image de coche dans un cercle" height="40px" width="40px"/></button>
+                            <div>
+                                <button onclick="swapCheckColor()" class="border-none background-none"><img id="checkedImg1" src="./img/coche0.png" alt="image de coche dans un cercle" height="40px" width="40px"/></button>
+                                <img src="./img/2.png" alt="" height="40px" width="40px" />
+                            </div>
                             <h2 class="padding-left_30">tae, porro ducimus rerum quibu!</h2>
                             <div class="flex">
                                 <img src="./img/editer.png" alt="image de crayon" height="40px" width="40px">
@@ -70,7 +85,7 @@
                             <button onclick="filterByPriority()"><img src="" alt=""></button>
                         </div>
                         <div class="flex justifyContent-spaceBetween width_100p100">
-                            <button onclick="filterByStatus(3)" class="border-none background-none"><img src="./img/FilterNone.png" alt="icone de filtrage barré" /></button>
+                            <button onclick="filterByStatus(3)" class="border-none background-none"><img src="./img/filterNone.png" alt="icone de filtrage barré" /></button>
                             <button onclick="closeFilterByStatus()" class="alignSelf-end border-none background-none"><img src="./img/croix.png" alt="icone de croix" /></button>
                         </div>
                     </div>

@@ -3,16 +3,19 @@
 let checkedNumber = 0
 let taskNumber = 1
 let tasks = []
-let test
+let backupTasks = []
 
 const taskHistory = document.getElementById("task-history")
 const formTitle = document.getElementById("form-title")
 const formDescription = document.getElementById("form-description")
 const priorityOfTask = document.getElementById("priority-range")
-
+const formStandard = document.getElementById("form-standard")
+const formEdit = document.getElementById("form-edit")
+const editTitle = document.getElementById("edit-title")
+const editDescription = document.getElementById("edit-description")
+const editPriority = document.getElementById("edit-priority-range")
+const editToDoList = document.getElementById("edit-to-do-list")
 //
-
-
 
 // fonction pour reset
 const initialize = () => {
@@ -23,6 +26,11 @@ const initialize = () => {
     document.toDoList.reset()
     closeConfirmationWindow()
     closeFilterByStatus()
+}
+
+// fonction qui incrémente le numéro des taches
+const taskNumberIncrementation = () => {
+    taskNumber ++
 }
 
 // fonction pour changer le status des taches
@@ -44,8 +52,8 @@ const swapCheckColor = (checkedImgTaskID) => {
 const onTaskSubmit = () => {
     tasks.push({id: taskNumber, title: formTitle.value, description: formDescription.value, priority: priorityOfTask.value, status: 0})
     document.toDoList.reset()
-    writeTask()
-    taskNumber ++
+    writeTask(tasks)
+    taskNumberIncrementation()
 }
 
 // fonction qui ajoute une tache aléatoire
@@ -65,21 +73,24 @@ const addRandomTask = () => {
     const randomNumber = Math.floor(Math.random()*(gap)) + min
     const randomTask = randomTaskList[randomNumber]
     tasks.push(randomTask)
-    writeTask()
-    taskNumber ++
+    writeTask(tasks)
+    taskNumberIncrementation()
 }
 
 //fonction qui écrit les taches en html
-const writeTask = () => {
+const writeTask = (displayTasks) => {
     taskHistory.innerHTML = ``
-    tasks.forEach((task) => {
+    displayTasks.forEach((task) => {
     taskHistory.innerHTML = taskHistory.innerHTML + `
     <div class="flex width_100p100 flex-column gap5 padding-top_20">
         <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
-            <button onclick="swapCheckColor(${task.id})" class="border-none background-none" id="checkedImgButton${task.id}"><img id="checkedImg${task.id}" src="./img/coche${task.status}.png" alt="icone de bloc note" height="40px" width="40px"/></button>
+            <div>
+                <button onclick="swapCheckColor(${task.id})" class="border-none background-none" id="checkedImgButton${task.id}"><img id="checkedImg${task.id}" src="./img/coche${task.status}.png" alt="icone de bloc note" height="40px" width="40px"/></button>
+                <img src="./img/${task.priority}.png" alt="un numéro" height="40px" width="40px" />
+            </div>
             <h2 class="padding-left_30">Task #${task.id} : ${task.title}</h2>
                 <div class="flex">
-                    <button onclick="editTask(${task.id})" class="border-none background-none"><img id="editButton${task.id}" src="./img/editer.png" alt="image de crayon" height="40px" width="40px"></button>
+                    <button onclick="editTaskForm(${task.id})" class="border-none background-none"><img id="editButton${task.id}" src="./img/editer.png" alt="image de crayon" height="40px" width="40px"></button>
                     <button onclick="deleteTask(${task.id})" class="border-none background-none"><img id="supprButton${task.id}" src="./img/corbeilleRouge.png" alt="image de corbeille" height="40px" width="40px"></button>
                 </div>
         </div>
@@ -98,58 +109,50 @@ const deleteTask = (taskID) => {
         if (task.id > taskID){
             task.id -= 1
         }
-        taskNumber ++
+        taskNumberIncrementation()
     })
-    taskHistory.innerHTML = ``
-    tasks.forEach((task) => {
-        taskHistory.innerHTML = taskHistory.innerHTML + `
-        <div class="flex width_100p100 flex-column gap5 padding-top_20">
-            <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
-                <button onclick="swapCheckColor(${task.id})" class="border-none background-none" id="checkedImgButton${task.id}"><img id="checkedImg${task.id}" src="./img/coche${task.status}.png" alt="icone de bloc note" height="40px" width="40px"/></button>
-                <h2 class="padding-left_30">Task #${task.id} : ${task.title}</h2>
-                <div class="flex">
-                    <button onclick="editTask(${task.id})" class="border-none background-none"><img id="editButton${task.id}" src="./img/editer.png" alt="image de crayon" height="40px" width="40px"></button>
-                    <button onclick="deleteTask(${task.id})" class="border-none background-none"><img id="supprButton${task.id}" src="./img/corbeilleRouge.png" alt="image de corbeille" height="40px" width="40px"></button>
-                </div>
-            </div>
-            <div class="border">   <!-- ligne-->   </div>
-            <p>Task #${task.id} : ${task.description}</p>
-        </div>
-        `
+    writeTask(tasks)
+}
+
+// fonction qui crée le formulaire pour edit une tache
+const editTaskForm = (taskID) => {
+    formStandard.setAttribute("class", "display-none")
+    formEdit.setAttribute("class", "display-block")
+    tasks.forEach( (task) => {
+        if (task.id === taskID) {
+            editTitle.setAttribute("value", task.title)
+            editDescription.setAttribute("value", task.description)
+            editPriority.setAttribute("value", task.priority)
+            editToDoList.setAttribute("onsubmit", `editTask(${taskID}); return false`)
+        }
     })
 }
 
-// fonction qui edit une tache //////////////////////////////// a faire !!
-const editTask = () => {
-
+// fonction qui edit une tache
+const editTask = (taskID) => {
+    formStandard.setAttribute("class", "display-block")
+    formEdit.setAttribute("class", "display-none")
+    tasks.forEach( (task) => {
+        if (task.id === taskID) {
+            task.title = editTitle.value
+            task.description = editDescription.value
+            task.priority = editPriority.value
+        }
+    })
+    document.editToDoList.reset()
+    writeTask(tasks)
 }
 
 // fonction qui filtre par status
 const filterByStatus = (statusNumber) => {
     closeFilterByStatus()
     if (statusNumber === 3) {
-        writeTask()
+        writeTask(tasks)
     } else {
         filteredTasks = tasks.filter( (task) => {
             return task.status === statusNumber
         })
-        taskHistory.innerHTML = ``
-        filteredTasks.forEach((task) => {
-            taskHistory.innerHTML = taskHistory.innerHTML + `
-            <div class="flex width_100p100 flex-column gap5 padding-top_20">
-                <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
-                    <button onclick="swapCheckColor(${task.id})" class="border-none background-none" id="checkedImgButton${task.id}"><img id="checkedImg${task.id}" src="./img/coche${task.status}.png" alt="icone de bloc note" height="40px" width="40px"/></button>
-                    <h2 class="padding-left_30">Task #${task.id} : ${task.title}</h2>
-                    <div class="flex">
-                        <button onclick="editTask(${task.id})" class="border-none background-none"><img id="editButton${task.id}" src="./img/editer.png" alt="image de crayon" height="40px" width="40px"></button>
-                        <button onclick="deleteTask(${task.id})" class="border-none background-none"><img id="supprButton${task.id}" src="./img/corbeilleRouge.png" alt="image de corbeille" height="40px" width="40px"></button>
-                    </div>
-                </div>
-                <div class="border">   <!-- ligne-->   </div>
-                <p>Task #${task.id} : ${task.description}</p>
-            </div>
-            `
-        })
+        writeTask(filteredTasks)
     }
 }
 
@@ -157,7 +160,7 @@ const filterByStatus = (statusNumber) => {
 const filterByPriority = () => {
     closeFilterByStatus()
     tasks.sort((a, b) => Number(b.priority) - Number(a.priority))
-    writeTask()
+    writeTask(tasks)
 }
 
 // fonction qui affiche la fenêtre de suppression 
