@@ -14,17 +14,16 @@
 .font-size_30 {
     font-size: 30px;
 }
+.font-size_20 {
+    font-size: 20px;
+}
 .text-align_center {
     text-align: center;
 }
-/* a trier */
-.add {
-    /* border-radius: 25px; */
-    padding: 1em 6em;
-    /* background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%); */
-    /* border: none; */
-    /* box-shadow: 0px 4px 4px #ACD4E1; */
+.line-height_2 {
+    line-height: 12px;
 }
+
 /* gestion des displays */
 .display-block {
     display: block;
@@ -43,6 +42,9 @@
 }
 .justifyContent-spaceBetween {
     justify-content: space-between;
+}
+.justifyContent-spaceAround {
+    justify-content: space-around;
 }
 .alignItem-flexEnd {
     align-items: flex-end;
@@ -74,10 +76,20 @@
 .background-linear_green-blue {
     background: linear-gradient(90deg, #A8D2A5 0%, #ACD4E1 115.2%);
 }
+.background-white {
+    background-color: white;
+}
+
 /* gestion des marges */
 
 .padding-left_30 {
     padding-left: 30px;
+}
+.padding-left_10 {
+    padding-left: 10px;
+}
+.padding-right_10 {
+    padding-right: 10px;
 }
 .padding-left_10p100 {
     padding-left: 10%;
@@ -93,6 +105,9 @@
 }
 .padding-top_20 {
     padding-top: 20px;
+}
+.padding-top_10 {
+    padding-top: 10px;
 }
 .padding-top {
     padding: 2em 4em;
@@ -133,8 +148,38 @@
 .height_100p100 {
     height: 100%;
 }
+.width_fc {
+    width: fit-content;
+}
 
+/* positions */
+.position-absolute {
+    position: absolute;
+}
+.position-relative {
+    position: relative;
+}
+.position-top_42p100 {
+    top: 42%;
+    
+}
+.position-left_17v5p100 {
+    left: 17.5%
+}
+.position-left_32p100 {
+    left: 32%
+}
+.position-left_57p100 {
+    left: 57%;
+}
 
+/* z-index */
+.z-index_5 {
+    z-index: 5;
+}
+.z-index_6 {
+    z-index: 6;
+}
 
 /* header */
 h1 {
@@ -190,24 +235,7 @@ footer img {
     cursor: pointer;
 }
 
-.border-none {
-    border: none;
-}
 
-/* positions */
-.position-absolute {
-    position: absolute;
-}
-.position-relative {
-    position: relative;
-}
-.position-top_42p100 {
-    top: 42%;
-    
-}
-.position-left_17v5p100 {
-    left: 17.5%
-}
 
 /* RESPONSIVE TELEPHONE */
 @media  (max-width: 720px) {

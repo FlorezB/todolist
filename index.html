@@ -58,18 +58,32 @@
                         </div>
                     </div>
                 </section>
+                <section id="statusFilterChoice" class="display-none position-absolute position-top_42p100 position-left_32p100 height_400 width_fc border background-white z-index_-1">
+                    <div class="flex flex-column justifyContent-spaceBetween height_100p100 alignItem-center">
+                        <h3 class="font-size_20 padding-left_10 padding-right_10 padding-top_10">Filter by ?</h3>
+                        <button onclick="filterByStatus(0)" class="border-none background-none"><img src="./img/coche0.png" alt="icone de bloc note" /></button>
+                        <button onclick="filterByStatus(1)" class="border-none background-none"><img src="./img/coche1.png" alt="icone de bloc note en cours d'écriture" /></button>
+                        <button onclick="filterByStatus(2)" class="border-none background-none"><img src="./img/coche2.png" alt="icone de validation" /></button>
+                        <button onclick="filterByStatus(3)" class="border-none background-none"><img src="./img/FilterNone.png" alt="icone de filtrage barré" /></button>
+                    </div>
+                </section>
+                <section id="priorityFilterChoice" class="display-none position-absolute position-top_42p100 position-left_57p100 height_400 width_fc border background-white z-index_-1">
+                    <div class="flex flex-column justifyContent-spaceBetween height_100p100 alignItem-center">
+                        <h3 class="font-size_20 padding-left_10 padding-right_10 padding-top_10">Filter by ?</h3>
+                        <button onclick="" class="border background-none"></button>
+                        <button onclick="" class="border background-none"></button>
+                        <button onclick="" class="border background-none"></button>
+                        <button onclick="" class="border background-none"></button>
+                        <button onclick="" class="border background-none"></button>
+                        <button onclick="" class="border background-none"></button>
+                        <button onclick="closeFilterByPriority()" class="border-none background-none"><img src="./img/FilterNone.png" alt="icone de filtrage barré" /></button>
+                    </div>
+                </section>
             </section>
-            <footer class="position-relative">
+            <footer>
                 <div>
-                    <!-- <label for="tri"></label> -->
-                    <!-- <input list="tri-list" id="tri" name="tri"> -->
-                    <!-- <select id="tri">
-                        <option value="A - Z">A - Z</option>
-                        <option value="Z - A">Z - A</option>
-                        <option value="Priority">Priority</option>
-                    </select> -->
-                    <button class="border-none background-none"><img src="./img/trier.png" alt="Logo de tri" /></button>
-                    <button class="border-none background-none"><img src="./img/filtre.png" alt="Logo de filtre" /></button>
+                    <button onclick="openFilterByPriority()" class="border-none background-none"><img src="./img/trier.png" alt="Logo de tri" /></button>
+                    <button onclick="openFilterByStatus()" class="border-none background-none"><img src="./img/filtre.png" alt="Logo de filtre" /></button>
                     <button class="border-none background-none"><img src="./img/aleatoire.png" alt="Logo aléatoire" /></button>
                     <button onclick="openConfirmationWindow()" class="border-none background-none"><img src="./img/corbeilleNoir.png" alt="Logo corbeille noire" /></button>
                 </div>
