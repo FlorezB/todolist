@@ -23,7 +23,10 @@ const initialize = () => {
     taskNumber = 1
     tasks = []
     taskHistory.innerHTML = ``
+    formStandard.setAttribute("class", "display-block")
+    formEdit.setAttribute("class", "display-none")
     document.toDoList.reset()
+    document.editToDoList.reset()
     closeConfirmationWindow()
     closeFilterByStatus()
 }
