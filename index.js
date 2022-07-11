@@ -3,7 +3,6 @@
 let checkedNumber = 0
 let taskNumber = 1
 let tasks = []
-let backupTasks = []
 
 const taskHistory = document.getElementById("task-history")
 const formTitle = document.getElementById("form-title")
@@ -53,7 +52,13 @@ const swapCheckColor = (checkedImgTaskID) => {
 
 // fonction qui récupère les données du formulaire
 const onTaskSubmit = () => {
-    tasks.push({id: taskNumber, title: formTitle.value, description: formDescription.value, priority: priorityOfTask.value, status: 0})
+    tasks.push({
+        id: taskNumber, 
+        title: formTitle.value, 
+        description: formDescription.value, 
+        priority: priorityOfTask.value, 
+        status: 0
+    })
     document.toDoList.reset()
     writeTask(tasks)
     taskNumberIncrementation()
