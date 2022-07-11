@@ -86,7 +86,7 @@ const writeTask = (displayTasks) => {
         <div class="flex justifyContent-spaceBetween alignItem-flexEnd padding-right_30">
             <div>
                 <button onclick="swapCheckColor(${task.id})" class="border-none background-none" id="checkedImgButton${task.id}"><img id="checkedImg${task.id}" src="./img/coche${task.status}.png" alt="icone de bloc note" height="40px" width="40px"/></button>
-                <img src="./img/${task.priority}.png" alt="un numéro" height="40px" width="40px" />
+                <img src="./img/${task.priority}.png" alt="icone du numéro ${task.priority}" height="40px" width="40px" />
             </div>
             <h2 class="padding-left_30">Task #${task.id} : ${task.title}</h2>
                 <div class="flex">
